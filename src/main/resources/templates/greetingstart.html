@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>Greeting | Start</title>
+</head>
+<body>
+    <form action="greetingThanks" method="get">
+
+        <label for="name"><b>Name</b></label><br>
+        <input id="name" type="text" name="name" value="" placeholder="George William" required><br>
+
+        <label for="email"><b>Email</b></label><br>
+        <input id="email" type="text" name="email" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+               placeholder="Your email Address" required>
+
+        <!--<select name="email" id="chooseEmail">
+            <option value="@hotmail.com">@hotmail.com</option>
+            <option value="@gmail.com">@gmail.com</option>
+            <option value="@outlook.com">@outlook.com</option>
+        </select><br>-->
+
+        <input class="submitbtn" type="submit" value="Submit">
+    </form>
+</body>
+</html>

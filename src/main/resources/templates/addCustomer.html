@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>Add Customer</title>
+</head>
+<body>
+    <form action="#" th:action="@{/customer/getAllAfterAddByView}" th:object="${Customer}" method="get">
+
+        <label for="name"><b>Name</b></label><br>
+        <input id="name" type="text" name="name" value="" placeholder="George William" required><br>
+
+        <label for="name"><b>Address</b></label><br>
+        <input id="address" type="text" name="address" value="" placeholder="Your Address" required>
+
+        <input class="submitbtn" type="submit" value="Submit">
+    </form>
+</body>
+</html>

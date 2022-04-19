@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>Greeting | Thanks</title>
+</head>
+<body>
+<p th:text="'Thank you ' + ${name} + ' for your subscription!'"></p>
+<p th:text="'Your email address is ' + ${email} +'!'"></p>
+</body>
+</html>

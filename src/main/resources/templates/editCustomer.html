@@ -1,0 +1,41 @@
+<!--
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="#" th:action="@{/customer/update}" th:object="${Customer}" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" th:field="*{name}"><br>
+    <input type="text" id="address" th:field="*{address}"><br>
+    <input type=hidden id="id" th:field="*{id}"><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>Add Customer</title>
+</head>
+<body>
+<form action="#" th:action="@{/customer/update}" th:object="${Customer}" method="post">
+
+    <label for="name"><b>Name</b></label><br>
+    <input id="name" type="text" th:field="*{name}" required><br>
+
+    <label for="name"><b>Address</b></label><br>
+    <input id="address" type="text" th:field="*{address}" required>
+    <input type=hidden id="id" th:field="*{id}"><br>
+
+    <input class="submitbtn" type="submit" value="Submit">
+</form>
+</body>
+</html>

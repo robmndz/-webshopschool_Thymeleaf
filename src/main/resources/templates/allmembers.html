@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet"/>
+    <title>All Members</title>
+</head>
+<body>
+
+<div class="container" th:unless="${#lists.isEmpty(allMembers)}">
+    <h2 th:text="${memberTitle}"></h2>
+    <div class="allCustomers">
+        <table>
+            <tbody>
+            <tr>
+                <th th:text="${mbershipNumber}"></th>
+                <th th:text="${nameTitle}"></th>
+                <th th:text="${addressTitle}"></th>
+            </tr>
+            <tr th:each="member : ${allMembers}">
+                <td><div class="customerName" th:text="${member.getMembershipNumber()}"></div></td>
+                <td><div class="customerName" th:text="${member.getCustomer().getName()}"></div></td>
+                <td><div class="customerAddress" th:text="${member.getCustomer().getAddress()}"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>
